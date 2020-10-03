@@ -79,14 +79,16 @@ try:
     def GPA(m):                        
         if(m>=90):
             return 10
-        elif(m>=80 & m<90):
+        elif(m>=80 and m<90):
             return 9
-        elif(m>=70 & m<80):
+        elif(m>=70 and m<80):
             return 8
-        elif(m>=60 & m<70):
+        elif(m>=60 and m<70):
             return 7
-        elif(m>=50 & m<60):
+        elif(m>=50 and m<60):
             return 6
+        else:
+            return 0
 
     #calculating SGPA and writing it into excel sheet
     sum=0
@@ -97,7 +99,9 @@ try:
 
     # Saving the excal sheet with the register number of student
     wb.save(regno_for_name+'.xls')
-    
+    print('Done writing data')
+
 finally:
      # Closing the chrome web driver  
     driver.close()
+
